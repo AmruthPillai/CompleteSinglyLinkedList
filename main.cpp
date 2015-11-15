@@ -27,7 +27,7 @@ Graphical Representation of Linked List
 Complete Functions List
 -----------------------
 
-O. Generic Functions
+O. Generic Operations
     0. Exit the Program
     1. Display Linked List
 
@@ -71,7 +71,7 @@ public:
         firstNode = NULL;
     }
 
-    // Destructor
+    // Destructor *OPTIONAL*
     ~LinkedList() {
         delete firstNode;
     }
@@ -134,11 +134,13 @@ void LinkedList :: displayLinkedList() {
         // Print Data in Current Cursor
         cout << "\t" << cursor -> data;
 
+        // Traverse through the List
         cursor = cursor -> link;
 
     }
 
     cout << endl;
+    return;
 
 }
 
@@ -156,7 +158,7 @@ void LinkedList :: insertAtFront() {
     NODE * tempNode = new NODE;
 
     // Initialize Temporary Node to NULL
-    tempNode -> link = NULL;
+    tempNode -> link = NULL;.
 
     // Get User Input for the New Node
     cout << "Enter data for the new node: ";
